@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome to the Dashboard</h1>
+
+        <div>
+            <label for="bookSelector">Seleccionar Libro:</label>
+            <select id="bookSelector">
+                <option value="book1">El Quijote</option>
+                <option value="book2">Cien Años de Soledad</option>
+                <option value="book3">Crónica de una Muerte Anunciada</option>
+                <option value="book4">1984</option>
+                <option value="book5">Matar a un Ruiseñor</option>
+                <option value="book6">La Odisea</option>
+                <option value="book7">La Divina Comedia</option>
+                <option value="book8">Orgullo y Prejuicio</option>
+                <option value="book9">Rayuela</option>
+                <option value="book10">Don Juan Tenorio</option>
+            </select>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <label for="uploadSummary">Subir Resumen:</label>
+            <input type="file" id="uploadSummary" accept=".txt,.pdf,.docx">
+        </div>
+
+        <button id="submitBtn" style="margin-top: 20px;">Submit</button>
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            const selectedBook = document.getElementById('bookSelector').value;
+            const summaryFile = document.getElementById('uploadSummary').files[0];
+
+            if (!summaryFile) {
+                alert('Por favor selecciona un archivo para subir.');
+                return;
+            }
+
+            alert(`Libro seleccionado: ${selectedBook}\nArchivo cargado: ${summaryFile.name}`);
+        });
+    </script>
+</body>
+</html>

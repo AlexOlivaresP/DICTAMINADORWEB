@@ -1,0 +1,107 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3B92C5; /* Fondo azul */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal del login */
+.login-container {
+    background: #ffffff; /* Caja blanca */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del login: SVG y formulario */
+.login-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separa los elementos */
+    gap: 30px; /* Espacio entre el SVG y el formulario */
+}
+
+/* Contenedor del SVG */
+.svg-container {
+    flex: 1; /* El SVG ocupa un espacio proporcional */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-container img {
+    max-width: 100%; /* Asegura que no exceda su contenedor */
+    height: auto; /* Mantén la proporción */
+}
+
+.svg-container svg {
+    width: 150px; /* Ajusta el ancho del SVG */
+    height: auto;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    flex: 1; /* El formulario también ocupa el mismo espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos de los inputs */
+input {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilo de los botones */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #4586a0;
+}
+
+/* Mensaje de error */
+#message {
+    margin-top: 10px;
+    color: red;
+}
+
+button {
+    background-color: #849CAA;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 80%; /* Ajusta el ancho al porcentaje que desees */
+    max-width: 300px; /* Opcional: Establece un ancho máximo */
+    text-align: center;
+    display: block; /* Permite que el botón sea tratado como un bloque */
+    margin: 10px auto; /* Centra el botón horizontalmente */
+}
+
